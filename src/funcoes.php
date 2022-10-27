@@ -46,7 +46,7 @@ class Funcoes
             throw new \Exception("valor inválido");
 
         if($numero === 2) 
-            throw new \Exception("valor inválido, 2 é primo, mas não possui nenhum numero anterior ao 2 que seja primo");
+            throw new \Exception("valor inválido, nenhum número primo imediatamente anterior ao número 2");
 
         for($i = $numero - 1; $i > 1; $i--)
             if($this->primo($i))
@@ -156,9 +156,9 @@ class Funcoes
 
         for($i = 0; $i < count($arr); $i++)
         {
-            $array = $arr;
-            unset($array[$i]);
-            if($this->sequencia([...$array]))
+            $arrayTeste = $arr;
+            unset($arrayTeste[$i]);
+            if($this->sequencia([...$arrayTeste]))
                 return true;
         }
 
